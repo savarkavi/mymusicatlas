@@ -1,4 +1,7 @@
 import ProfileHeader from "@/components/profile/profile-header";
+import CuratedPlaylists from "@/components/profile/curated-playlists";
+import MixtapeBanner from "@/components/profile/mixtape-banner";
+import TopAlbums from "@/components/profile/top-albums";
 
 export default async function ProfilePage({
   params,
@@ -13,6 +16,9 @@ export default async function ProfilePage({
         username={username}
         bio="Discover new sounds, share your favorite records, and keep your playlists close."
       />
+      <MixtapeBanner />
+      <CuratedPlaylists />
+      <TopAlbums />
     </main>
   );
 }
