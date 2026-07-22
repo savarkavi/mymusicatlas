@@ -41,7 +41,7 @@ export default function ProfileHeader({
         <div className="from-background/5 to-background absolute inset-0 bg-linear-to-r via-transparent" />
       </div>
 
-      <div className="relative z-10 mx-auto -mt-20 flex w-full flex-col gap-6 px-5 pb-8 sm:px-8 sm:pb-10 lg:flex-row lg:items-end lg:justify-between">
+      <div className="relative z-10 mx-auto -mt-20 flex w-full flex-col gap-6 pb-8 sm:pb-10 lg:flex-row lg:items-end lg:justify-between">
         <div className="flex min-w-0 flex-col gap-5 sm:flex-row sm:items-end">
           <Image
             src="/profile-pic.jpg"
@@ -77,7 +77,7 @@ export default function ProfileHeader({
           </div>
         </div>
 
-        <div className="flex shrink-0 items-center gap-2">
+        <div className="flex shrink-0 items-center gap-3">
           <Button
             type="button"
             variant="outline"
