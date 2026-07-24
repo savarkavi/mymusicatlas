@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import Header from "@/components/layout/header";
 import { ClerkProvider } from "@clerk/nextjs";
+import ConvexClientProvider from "@/components/providers/convex-client-provider";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -50,8 +51,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <ClerkProvider>
-            <Header />
-            <main className="flex-1">{children}</main>
+            <ConvexClientProvider>
+              <Header />
+              <main className="flex-1">{children}</main>
+            </ConvexClientProvider>
           </ClerkProvider>
         </ThemeProvider>
       </body>
