@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import Header from "@/components/layout/header";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -40,7 +41,7 @@ export default function RootLayout({
         inter.variable,
       )}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="flex min-h-full flex-col">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -48,8 +49,10 @@ export default function RootLayout({
           forcedTheme="dark"
           disableTransitionOnChange
         >
-          <Header />
-          <main className="flex-1">{children}</main>
+          <ClerkProvider>
+            <Header />
+            <main className="flex-1">{children}</main>
+          </ClerkProvider>
         </ThemeProvider>
       </body>
     </html>
